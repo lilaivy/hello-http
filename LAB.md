@@ -10,7 +10,7 @@
 * responds with an interesting fact about http (up to you) if the method is GET and the url (path) is `/fact`
 * Respond to `/` or `index.html` by serving the contents of an `index.html` file you define.
 * You can add other routes if you like
-* Any other request should return status code 404 Not Found and include the text: `CANNOT <verb> <path>`
+* Any other request should return status code 404 Not Found and include the text: `CANNOT <method> <path>`
 * Add a `README.md` that describes how to use your API 
 
 ### Architecture and Design
