@@ -24,4 +24,12 @@ describe('app', () => {
                 done();
             });
     });
+
+    it('gets index on root /', done => {
+        request.get('/')
+            .end((err, res) => {
+                assert.match(res.text, /Lab Server Is Doing It!/);
+                done();
+            });
+    });
 });
