@@ -32,4 +32,12 @@ describe('app', () => {
                 done();
             });
     });
+
+    it('provides an http fact', done => {
+        request.get('/fact')
+            .end((err, res) => {
+                assert.equal(res.text, '<h1>Dope fact about HTTP!</h1>');
+                done();
+            });
+    });
 });
