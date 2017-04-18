@@ -16,7 +16,7 @@
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "test": "mocah",
+    "test": "mocha",
     "start": "nodemon server.js"
   },
   "repository": {
