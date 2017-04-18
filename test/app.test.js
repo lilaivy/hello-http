@@ -56,16 +56,21 @@ describe('app', () => {
         });
 
         it('it creates a logs directory if none exists and returns 201', done => {
+            const postTestData = {
+                text: 'this is the post body'
+            };
+            
             request.
                 post('/logs') //when we hit logs route 
-                .send({text:'this the post body'}) //if fields are in your postbody, that's the info that you're updating
+                .send(postTestData) //if fields are in your postbody, that's the info that you're updating
                 .end((err, res) => {
 
-                    
-                    if (err) return done(err);
 
+                    if (err) return done(err);
                     assert.equal(res.statusCode, 201);
+
                     fs.readdir('./logs', (err, files) => {  //readdir returns an array of the files in the directory
+                        if (err) return done(err);
                         assert.equal(files.length, 1);
                         done();
 
