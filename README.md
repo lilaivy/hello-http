@@ -6,3 +6,4 @@
 * Provide a generic greeeting if no name is provided.
 * Provide a 404 error, if necessary.
 * Provide a fun fact about HTTP.
+* Provides a logs directory with timestamped files.
